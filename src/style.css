@@ -40,12 +40,10 @@ body {
   padding-right: 75px;
   padding-top: 45px;
   padding-bottom: 45px;
-  max-width: 450px;
+  max-width: 80%;
   background-color: rgba(5, 2, 10, 0.7);
 }
 
-label,
-input,
 button,
 select {
   display: block;
@@ -85,7 +83,7 @@ select {
 }
 
 input {
-  display: inline-block;
+  display: none;
 }
 button {
   width: 100%;
@@ -121,4 +119,76 @@ input::checked ~ .front {
 
 .radio-input {
   display: inline-block;
+}
+#rubric {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 2fr 2fr;
+  width: 100%;
+  max-width: auto;
+  margin: 0px auto;
+  grid-gap: 5px;
+}
+.cell.level {
+  color: white;
+  text-align: center;
+}
+.cell span {
+  padding: 10px 0px;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+}
+.cell.level.begins {
+  background-color: #ec7852;
+}
+.cell.level.approaches {
+  background-color: #a13c81;
+}
+.cell.level.meets {
+   background-color: #4ca897; 
+}
+.cell.level.exceeds {
+  background-color: #35759a;
+}
+label {
+  background-color: #000;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  transition: 0.2s ease;
+}
+.cell.skill label {
+  background-color: #3e3d3e;
+  color: white;
+  width: 500px;
+}
+.cell {
+  display: flex;
+}
+input:checked ~ label.begins {
+  background-color: #ebcfb6;
+}
+input:checked ~ label.approaches {
+  background-color: #dfb8d4
+}
+input:checked ~ label.meets {
+  background-color: #c3e6dd;
+}
+input:checked ~ label.exceeds {
+  background-color: #d8eaf4
+}
+.cell:not(.skill) label {
+  cursor: pointer;
+}
+label.begins {
+  border-left: 2px solid #ec7852;
+}
+label.approaches {
+  border-left: 2px solid #a13c81;
+}
+label.meets {
+  border-left: 2px solid #4ca897;
+}
+label.exceeds {
+  border-left: 2px solid #35759a;
 }

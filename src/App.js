@@ -6,216 +6,158 @@ export default function App() {
     <div>
       <div className="form">
         <header>
-          <h1 id="title">freeCodeCamp Survey Form</h1>
+          <h1 id="title">MCM Rubric</h1>
           <p id="description">
             Thank you for taking the time to help us <br /> improve the platform
           </p>
         </header>
         <form id="survey-form">
           <label htmlFor="name" id="name-label">
-            Name
+            Author Login
           </label>
-          <input id="name" type="text" placeholder="Enter your name" required />
+          <input id="name" type="text" placeholder="Enter MCM author login" required />
           <label htmlFor="email" id="email-label">
-            Email
+            MCM number
           </label>
           <input
             id="email"
             type="email"
-            placeholder="Enter your Email"
+            placeholder="MCM-XXXXXXX"
             required
           />
-          <label htmlFor="number" id="number-label">
-            Age
+          <br />
+          <hr class="solid" />
+          <br />
+          <h2>General Content Checks</h2>
+          {/* General Content Questions */}
+<div id="rubric">
+        <div class="cell empty">
+       </div>
+        <div class="cell level begins">
+          <span>Begins</span>
+         </div>
+         <div class="cell level approaches">
+           <span>Approaches</span>
+         </div>
+         <div class="cell level meets">
+           <span>Meets</span>
+         </div>
+       
+        <div class="cell level exceeds">
+          <span>Exceeds</span>
+        </div>
+       <div class="cell skill">
+          <label>
+          Are all items in the Overview clear and detailed so that anyone viewing the CM, regardless of specific technical knowledge, can understand the need and risks of the CM?
           </label>
-          <input
-            id="number"
-            type="number"
-            placeholder="Enter your age"
-            min="15"
-            max="120"
-            required
-          />
-          <label htmlFor="dropdown" id="dropdown-label">
-            Which option best describes your current role?
+        </div>
+        <div class="cell">  
+          
+          {/* <!-- end header, start first row --> */}
+          
+            <input type="radio" id="radio-1" name="row1"/>
+          <label for="radio-1" class="begins">Few or no words are pronounced correctly.</label>
+        </div>
+       <div class="cell">
+            <input type="radio" id="radio-2" name="row1"/>
+         <label for="radio-2" class="approaches">Some words are pronounced correctly.</label>
+       </div>
+
+  
+        <div class="cell">
+          <input type="radio" id="radio-3" name="row1"/>
+          <label for="radio-3" class="meets">Most words are pronounced correctly.</label>
+        </div>
+  
+       <div class="cell">
+         <input type="radio" id="radio-4" name="row1"/>
+         <label for="radio-4" class="exceeds">All words are pronounced correctly.</label>
+       </div>
+  
+    {/* <!-- end row 1, start row 2 --> */}
+    <div class="cell skill">
+          <label>
+          Is the Worst Case Scenario accurate and realistic to measuring a total-failure situation of the CM?
           </label>
-          <select id="dropdown" defaultValue="" required>
-            <option disabled value="">
-              Select current role
-            </option>
-            <option value="student"> Student</option>
-            <option value="Full Time Job"> Full Time Job</option>
-            <option value="Full Time Learner"> Full Time Learner</option>
-            <option value="Prefer Not to say"> Prefer not to say</option>
-            <option value="Other"> Other</option>
-          </select>
-          <label htmlFor="radiobutton" id="radio-label">
-            Would you recommend freeCodeCamp to a friend
+        </div>
+  
+
+  
+    <div class="cell">
+          <input type="radio" id="radio-5" name="row2"/>
+          <label for="radio-5" class="begins">Struggles to read</label>
+        </div>
+  
+       <div class="cell">
+         <input type="radio" id="radio-6" name="row2"/>
+         <label for="radio-6" class="approaches">Reads word for word</label>
+       </div>
+  
+     <div class="cell">
+          <input type="radio" id="radio-7" name="row2"/>
+          <label for="radio-7" class="meets">Groups words together logically</label>
+        </div>
+  
+       <div class="cell">
+         <input type="radio" id="radio-8" name="row2"/>
+         <label for="radio-8" class="exceeds">Reads easily and fluently</label>
+       </div>
+  
+    {/* <!-- end row 2, start row 3  --> */}
+
+  <div class="cell skill">
+          <label>
+          Are all steps clear and detailed so that anyone with the permissions to perform the steps, regardless of tenure or individual skill, may do so without difficulty?
           </label>
-          <div className="radio-input">
-            <input
-              type="radio"
-              name="recommend"
-              className="recommend"
-              value="Definetly"
-            />
-            <label>Definetly</label>
-          </div>
-          <div className="radio-input">
-            <input
-              type="radio"
-              className="recommend"
-              name="recommend"
-              value="Maybe"
-            />
-            <label>Maybe</label>
-          </div>
-          <div className="radio-input">
-            <input
-              type="radio"
-              className="recommend"
-              name="recommend"
-              value="Sure"
-            />
-            <label>Sure</label>
-          </div>
-          <label htmlFor="dropdown1" id="dropdown-label">
-            What is your favorite feature of freeCodeCamp?
+       </div>
+  
+    <div class="cell">
+          <input type="radio" id="radio-9" name="row3"/>
+          <label for="radio-9" class="begins">Ignores punctuation marks</label>
+        </div>
+  
+       <div class="cell approaches">
+         <input type="radio" id="radio-10" name="row3"/>
+         <label for="radio-10" class="approaches">Replaces punctuation marks with a breath</label>
+       </div>
+  
+     <div class="cell meets">
+          <input type="radio" id="radio-11" name="row3"/>
+          <label for="radio-11" class="meets">Observes punctuation but stops at the end of a line</label>
+        </div>
+  
+       <div class="cell">
+         <input type="radio" id="radio-12" name="row3"/>
+         <label for="radio-12" class="exceeds">Uses punctuation correctly and efficiently</label>
+       </div>
+{/* <!-- end row 3, start row 4  --> */}
+
+<div class="cell skill">
+          <label>
+          Is the CM clearly calling out any spare hardware that should be brought along in the event of an issue requiring full device replacement?
           </label>
-          <select id="dropdown1" defaultValue="" required>
-            <option disabled value="">
-              Select an options
-            </option>
-            <option value="Challenges"> Challenges</option>
-            <option value="Projects"> Projects</option>
-            <option value="Community"> Community</option>
-            <option value="Open Source"> Open Source</option>
-          </select>
-          <label htmlFor="checkbox" id="checkbox-label">
-            What would you like to see improved?
-            <span className="secondp">(Check all that apply)</span>
-          </label>
-          <div className="radio-input">
-            <input
-              className="front"
-              type="checkbox"
-              name="improved"
-              value="Front-end Projects"
-            />
-            <label>Front End Projects</label>
-          </div>
-          <br />
-
-          <div className="radio-input">
-            <input
-              type="checkbox"
-              className="front"
-              name="improved"
-              value="Back-end Projects"
-            />
-            <label>Back End Projects</label>
-          </div>
-          <br />
-
-          <div className="radio-input">
-            <input
-              type="checkbox"
-              className="front"
-              name="improved"
-              value="Data Visualisation"
-            />
-            <label>Data Visualisation</label>
-          </div>
-          <br />
-
-          <div className="radio-input">
-            <input
-              type="checkbox"
-              className="front"
-              name="improved"
-              value="Challenges"
-            />
-            <label>Challenges</label>
-          </div>
-          <br />
-
-          <div className="radio-input">
-            <input
-              type="checkbox"
-              className="front"
-              name="improved"
-              value="Open Source Community"
-            />
-            <label>Open Source Community</label>
-          </div>
-          <br />
-
-          <div className="radio-input">
-            <input
-              className="front"
-              type="checkbox"
-              name="improved"
-              value="Gitter help rooms"
-            />
-            <label>Gitter help rooms</label>
-          </div>
-          <br />
-
-          <div className="radio-input">
-            <input
-              className="front"
-              type="checkbox"
-              name="improved"
-              value="Videos"
-            />
-            <label>Videos</label>
-          </div>
-          <br />
-
-          <div className="radio-input">
-            <input
-              className="front"
-              type="checkbox"
-              name="improved"
-              value="City Meetups"
-            />
-            <label>City Meetups</label>
-          </div>
-          <br />
-
-          <div className="radio-input">
-            <input
-              className="front"
-              type="checkbox"
-              name="improved"
-              value="Wiki"
-            />
-            <label>Wiki</label>
-          </div>
-          <br />
-
-          <div className="radio-input">
-            <input
-              className="front"
-              type="checkbox"
-              name="improved"
-              value="Forum"
-            />
-            <label>Forum</label>
-          </div>
-          <br />
-
-          <div className="radio-input">
-            <input
-              type="checkbox"
-              className="front11"
-              name="improved"
-              value="Additional Courses"
-            />
-            <label>Additional Courses</label>
-          </div>
-          <br />
-
+       </div>
+  
+    <div class="cell">
+          <input type="radio" id="radio-9" name="row3"/>
+          <label for="radio-9" class="begins">Ignores punctuation marks</label>
+        </div>
+  
+       <div class="cell approaches">
+         <input type="radio" id="radio-10" name="row3"/>
+         <label for="radio-10" class="approaches">Replaces punctuation marks with a breath</label>
+       </div>
+  
+     <div class="cell meets">
+          <input type="radio" id="radio-11" name="row3"/>
+          <label for="radio-11" class="meets">Observes punctuation but stops at the end of a line</label>
+        </div>
+  
+       <div class="cell">
+         <input type="radio" id="radio-12" name="row3"/>
+         <label for="radio-12" class="exceeds">Uses punctuation correctly and efficiently</label>
+       </div>
+</div>
           <label htmlFor="checkbox" id="textarea-label">
             Any comments or suggestions?
           </label>
@@ -229,7 +171,7 @@ export default function App() {
         </form>
       </div>
 
-      <div id="footer">Designed by Sree Sankar</div>
+      <div id="footer"></div>
     </div>
   );
 }
